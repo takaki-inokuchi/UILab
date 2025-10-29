@@ -29,8 +29,9 @@ export default async function RootLayout({
 }>) {
   const res = await client.get({ endpoint: "blogs" });
   const allArticles = res.contents;
+
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

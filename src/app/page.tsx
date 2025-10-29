@@ -1,19 +1,27 @@
-import Image from "next/image";
+import { client } from "./lib/microcms";
 
-export default function Home() {
+export default async function Home() {
+  const data = await client.get({ endpoint: "blogs" }); //エンドポイント取得（API名）
   return (
-    
-    <div>
-      こちらのサイトではTailwindcssの使用方法をわかりやすく記述していこうと思います。
-      <h2 className="text-2xl">はじめに</h2>
-      <p>私は開発エンジニアになるために、日々勉強に励んでおります。たかきちと申します。これから皆さんと成長していければと思います。</p>
-      <p></p>
-    </div>
+    <main className="max-w-3xl mx-auto p-6">
+      <h1>TailwindCSS Lab</h1>
+
+      <ul className="space-y-3">
+        {data.contents.map((post: BlogPost) => (
+          <li key={post.id}>
+            <a href={`/blogs/${post.id}`}>
+              <h2 className="text-xl font-semibold">{post.title}</h2>
+              {post.thumbnail && (
+                <img
+                  src={post.thumbnail.url}
+                  alt=""
+                  className="rounded-ig mt-3"
+                />
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }
-//  <div>
-//       こちらのサイトではTailwindcssの使用方法をわかりやすく記述していこうと思います。
-//       <h2 className="text-2xl">はじめに</h2>
-//       <p>私は開発エンジニアになるために、日々勉強に励んでおります。たかきちと申します。これから皆さんと成長していければと思います。</p>
-//       <p></p>
-//     </div>

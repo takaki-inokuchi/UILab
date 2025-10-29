@@ -25,11 +25,11 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-16 bg-blue-300 z-10 transition-transform duration-300 flex items-center justify-center text-white text-4xl ${
+      className={`fixed top-0 left-0 w-full h-16 bg-blue-500 z-10 transition-transform duration-300 flex items-center justify-center text-white text-4xl ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <Link href="/">Craft UI</Link>
+      <Link href="/">UI Lab Studio</Link>
     </div>
   );
 };

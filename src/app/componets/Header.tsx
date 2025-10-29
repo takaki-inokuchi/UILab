@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY; //上にスクロールしたら数値増える！
+      const currentScrollY = window.scrollY; 
       if (currentScrollY <= 0) {
         setShow(true);
       } else if (currentScrollY > lastScrollY) {

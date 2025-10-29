@@ -1,6 +1,7 @@
 import { client } from "@/app/lib/microcms";
 import { notFound } from "next/navigation";
-import styles from "./page.module.css"
+import "highlight.js/styles/github-dark-dimmed.css";
+import PostBody from "./PostBody";
 
 export async function generateStaticParams() {
   const data = await client.get({ endpoint: "blogs" });
@@ -33,10 +34,8 @@ export default async function BlogDetail({
       )}
 
       {/* ここで HTML文字列をレンダリング */}
-      <div
-        className={`${styles.post} prose prose-zinc`} 
-        dangerouslySetInnerHTML={{ __html: data.content ?? "" }}
-      />
+      
+        <PostBody content={data.content ?? ""} />
     </article>
   );
 }

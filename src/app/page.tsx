@@ -4,13 +4,12 @@ export default async function Home() {
   const data = await client.get({ endpoint: "blogs" }); //エンドポイント取得（API名）
   return (
     <main className="max-w-3xl mx-auto p-6">
-      <h1>TailwindCSS Lab</h1>
 
-      <ul className="space-y-3">
+      <ul className="space-y-10">
         {data.contents.map((post: BlogPost) => (
           <li key={post.id}>
             <a href={`/blogs/${post.id}`}>
-              <h2 className="text-xl font-semibold">{post.title}</h2>
+              <h2 className="text-2xl font-semibold">{post.title}</h2>
               {post.thumbnail && (
                 <img
                   src={post.thumbnail.url}

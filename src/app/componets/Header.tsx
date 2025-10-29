@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [show, setShow] = useState(true);
@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY; 
+      const currentScrollY = window.scrollY;
       if (currentScrollY <= 0) {
         setShow(true);
       } else if (currentScrollY > lastScrollY) {

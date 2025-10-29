@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./componets/Footer";
 import Header from "./componets/Header";
+import Sidebar from "./componets/Sidebar";
+import { client } from "./lib/microcms";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,21 +18,35 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "UI Lab Studio",
-  description: "UI Lab StudioはモダンなCSSの使用方法をまとめているブログ記事です。",
+  description:
+    "UI Lab StudioはモダンなCSSの使用方法をまとめているブログ記事です。",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const res = await client.get({ endpoint: "blogs" });
+  const allArticles = res.contents;
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main className="pt-16 pb-12">{children}</main>
+         <div className="flex justify-center pt-16 pb-12">
+        <div className="flex max-w-6xl w-full gap-6">
+          
+          {/* メイン記事（左） */}
+          <main className="flex-[3] bg-white p-6 rounded shadow">
+            {children}
+          </main>
+
+          {/* サイドバー（右） */}
+          <Sidebar articles={allArticles} className="flex-[1]" />
+        </div>
+      </div>
         <Footer />
       </body>
     </html>

@@ -35,18 +35,19 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-         <div className="flex justify-center pt-16 pb-12">
-        <div className="flex max-w-6xl w-full gap-6">
-          
-          {/* メイン記事（左） */}
-          <main className="flex-[3] bg-white p-6 rounded shadow">
-            {children}
-          </main>
+        <div className="flex justify-center pt-16 pb-12">
+          <div className="flex max-w-6xl w-full gap-6">
+            {/* メイン記事（左） */}
+            <main className="flex-[3] bg-white p-6 rounded shadow">
+              {children}
+            </main>
 
-          {/* サイドバー（右） */}
-          <Sidebar articles={allArticles} className="flex-[1]" />
+            {/* サイドバー（右） */}
+            <div className="flex-[1]">
+              <Sidebar articles={allArticles} />
+            </div>
+          </div>
         </div>
-      </div>
         <Footer />
       </body>
     </html>

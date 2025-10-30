@@ -1,5 +1,7 @@
 "use client";
 
+import Profile from "./Profile";
+
 type SidebarProps = {
   articles: { id: string; title: string }[];
 };
@@ -22,6 +24,9 @@ export default function Sidebar({ articles }: SidebarProps) {
             </li>
           ))}
         </ul>
+        <div className="pt-4">
+          <Profile />
+        </div>
       </aside>
 
       {/* モバイル用 Sidebar（記事下に表示） */}
@@ -39,6 +44,9 @@ export default function Sidebar({ articles }: SidebarProps) {
             </li>
           ))}
         </ul>
+        <div className="pt-4">
+          <Profile />
+        </div>
       </div>
     </>
   );

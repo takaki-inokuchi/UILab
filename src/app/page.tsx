@@ -3,7 +3,7 @@ import { client } from "./lib/microcms";
 export default async function Home() {
   const data = await client.get({ endpoint: "blogs" }); //エンドポイント取得（API名）
   return (
-    <main className="max-w-3xl mx-auto p-6">
+    <main className="max-w-6xl mx-auto p-6">
 
       <ul className="space-y-10">
         {data.contents.map((post: BlogPost) => (

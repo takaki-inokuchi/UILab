@@ -22,7 +22,7 @@ export default async function BlogDetail({
   console.log(data);
 
   return (
-    <article className="max-w-3xl mx-auto p-6 leading-relaxed tracking-wide">
+    <article className="max-w-3xl mx-auto p-1 leading-relaxed tracking-wide">
       <h1 className="flex items-center justify-center text-3xl font-bold mb-4">{data.title}</h1>
 
       {data.thumbnail && (

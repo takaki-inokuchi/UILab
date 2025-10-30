@@ -36,8 +36,8 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="flex flex-col md:flex-row justify-center max-w-6xl w-full mx-auto ">
-          <main className="flex-1 w-full bg-white rounded shadow pt-16 pb-12">
+        <div className="flex flex-col md:flex-row justify-center max-w-6xl w-full gap-6 mx-auto ">
+          <main className="flex-1 w-full bg-white p-3 rounded shadow pt-16 pb-12">
             {children}
             <div className="mt-6 md:hidden">
               <Sidebar articles={allArticles} />

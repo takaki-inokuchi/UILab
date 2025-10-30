@@ -36,18 +36,15 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="flex justify-center pt-16 pb-12">
-          <div className="flex max-w-6xl w-full gap-6">
-            <main className="flex-[3] bg-white p-6 rounded shadow">
-              {children}
-              <div className="mt-6 md:hidden">
-                <Sidebar articles={allArticles} />
-              </div>
-            </main>
-
-            <div className="hidden md:flex md:flex-[1] md:ml-6">
+        <div className="flex flex-col md:flex-row justify-center max-w-6xl w-full gap-6 mx-auto">
+          <main className="flex-1 bg-white p-6 rounded shadow pt-16 pb-12">
+            {children}
+            <div className="mt-6 md:hidden">
               <Sidebar articles={allArticles} />
             </div>
+          </main>
+          <div className="hidden md:block md:w-64 md:ml-6">
+            <Sidebar articles={allArticles} />
           </div>
         </div>
         <Footer />

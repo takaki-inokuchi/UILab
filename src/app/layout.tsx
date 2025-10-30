@@ -38,13 +38,14 @@ export default async function RootLayout({
         <Header />
         <div className="flex justify-center pt-16 pb-12">
           <div className="flex max-w-6xl w-full gap-6">
-            {/* メイン記事（左） */}
             <main className="flex-[3] bg-white p-6 rounded shadow">
               {children}
+              <div className="mt-6 md:hidden">
+                <Sidebar articles={allArticles} />
+              </div>
             </main>
 
-            {/* サイドバー（右） */}
-            <div className="flex-[1]">
+            <div className="hidden md:flex md:flex-[1] md:ml-6">
               <Sidebar articles={allArticles} />
             </div>
           </div>

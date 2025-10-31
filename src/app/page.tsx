@@ -3,17 +3,17 @@ import { client } from "./lib/microcms";
 export default async function Home() {
   const data = await client.get({ endpoint: "blogs" }); //エンドポイント取得（API名）
   return (
-    <main className="max-w-6xl mx-auto p-6 shadow">
+    <main className="max-w-6xl mx-auto p-2 shadow">
       <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-blue-300 p-3">
         {data.contents.map((post: BlogPost) => (
-          <li key={post.id} className="bg-white rounded-lg shadow p-4 h-95">
+          <li key={post.id} className="bg-white rounded-lg shadow p-2 h-95">
             <a href={`/blogs/${post.id}`}>
               <h2 className="text-2xl font-semibold">{post.title}</h2>
               {post.thumbnail && (
                 <img
                   src={post.thumbnail.url}
                   alt=""
-                 className="w-full h-56 object-contain rounded mb-1"
+                  className="w-full h-56 object-contain rounded mb-1"
                 />
               )}
               <div className="pt-3">

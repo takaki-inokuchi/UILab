@@ -4,7 +4,7 @@ export default async function Home() {
   const data = await client.get({ endpoint: "blogs" }); //エンドポイント取得（API名）
   return (
     <main className="max-w-6xl mx-auto p-6 shadow">
-      <ul className="space-y-10 ">
+      <ul className="space-y-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
         {data.contents.map((post: BlogPost) => (
           <li key={post.id}>
             <a href={`/blogs/${post.id}`}>

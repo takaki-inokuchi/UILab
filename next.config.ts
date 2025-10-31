@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         hostname: "**.microcms.io",
       },
     ],
+    domains: ["images.microcms-assets.io"],
   },
 };
 

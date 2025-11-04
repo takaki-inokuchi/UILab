@@ -25,9 +25,10 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-16 bg-blue-500 z-10 transition-transform duration-300 flex items-center justify-center text-white text-4xl ${
-        show ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 
+        to-blue-00 z-10 transition-transform duration-300 flex items-center justify-center text-white text-4xl ${
+          show ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <Link href="/">UI Lab Studio</Link>
     </div>

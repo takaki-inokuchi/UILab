@@ -7,7 +7,7 @@ export default async function Home() {
     <main className="max-w-6xl mx-auto p-2 shadow">
       <ul className="space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-blue-300 p-3">
         {data.contents.map((post: BlogPost) => (
-          <li key={post.id} className="bg-white rounded-lg shadow p-2 h-100 transition-transform duration-300 ease-out hover:scale-105">
+          <li key={post.id} className="bg-white rounded-lg shadow p-2 h-100 transition-transform duration-300 ease-out hover:scale-102">
             <a href={`/blogs/${post.id}`}>
               <h2 className="text-2xl font-semibold">{post.title}</h2>
               {post.thumbnail && (

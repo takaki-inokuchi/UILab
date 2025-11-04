@@ -3,8 +3,9 @@ import { SiQiita } from "react-icons/si";
 
 const profile = () => {
   return (
-    <section className="shadow border border-blue-500 rounded-lg p-2 flex flex-col gap-6">
-      <div>
+    <section className="rounded-lg p-2 flex flex-col gap-6">
+      <div className=" transition-all duration-300
+            hover:shadow hover:bg-blue-50 hover:scale-104">
         <div className="flex items-center justify-center">
           <img src="/next.svg" alt="井ノ口 孝輝" className="w-24 h-24 " />
         </div>
@@ -20,21 +21,21 @@ const profile = () => {
           <a
             href="https://x.com/yourhandle"
             target="_blank"
-            className="text-blue-500 hover:text-blue-800 transition"
+            className="text-blue-500 hover:text-blue-800 transition transition-transform duration-300 transform hover:scale-125"
           >
             <FaTwitter className="w-8 h-8 hover:text-black" />
           </a>
           <a
             href="https://github.com/takaki-inokuchi"
             target="_blank"
-            className="text-gray-500 hover:text-gray-800 transition"
+            className="text-gray-500 hover:text-gray-800 transition transition-transform duration-300 transform hover:scale-125"
           >
             <FaGithub className="w-8 h-8" />
           </a>
           <a
             href="https://qiita.com/takaki-inokuchi"
             target="_blank"
-            className="text-green-500 hover:text-green-800 transition"
+            className="text-green-500 hover:text-green-800 transition transition-transform duration-300 transform hover:scale-125"
           >
             <SiQiita className="w-8 h-8" />
           </a>

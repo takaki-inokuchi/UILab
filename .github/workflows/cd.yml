@@ -1,28 +1,26 @@
-name: Daily Vercel Deploy
+name: Deploy
 
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '0 14 * * *' 
+    - cron: "0 14 * * *"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 20
 
-      - name: Install Vercel CLI
-        run: npm install -g vercel
+      - name: Install dependencies
+        run: npm install
 
       - name: Deploy to Vercel
         run: |
           vercel --prod \
             --token ${{ secrets.VERCEL_TOKEN }} \
-            --name my-project-name \
             --yes

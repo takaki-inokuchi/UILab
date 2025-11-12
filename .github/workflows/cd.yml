@@ -1,9 +1,10 @@
 name: Daily Vercel Deploy
 
 on:
+  orkflow_dispatch:
   schedule:
     - cron: '0 15 * * *'
-  orkflow_dispatch:
+  
 
 jobs:
   deploy:

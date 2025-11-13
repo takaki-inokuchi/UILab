@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "UI Lab Studio",
   description:
     "UI Lab StudioはモダンなCSSの使用方法をまとめているブログ記事です",
+  icons: {
+    icon: "/siteimage.png", 
+    shortcut: "/siteimage-32x32.png",
+    apple: "/siteimage.png",
+  },
 };
 
 export default async function RootLayout({

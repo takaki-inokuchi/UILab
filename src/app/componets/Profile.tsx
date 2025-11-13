@@ -7,7 +7,7 @@ const profile = () => {
       <div className=" transition-all duration-300
             hover:shadow hover:bg-blue-50 hover:scale-104">
         <div className="flex items-center justify-center">
-          <img src="/next.svg" alt="井ノ口 孝輝" className="w-24 h-24 " />
+          <img src="/siteimage.png" alt="井ノ口 孝輝" className="w-50 h-50 " />
         </div>
         <h2 className="flex items-center justify-center pt-2 pb-2 text-xl font-semibold">
           井ノ口 孝輝

@@ -27,7 +27,6 @@ UI Lab Studio は、UI や CSS の使い方をわかりやすく説明する Web
 - **バッチ処理**: Node.js, ts-node
 - **CI/CD / 自動化**: GitHub Actions
 - **言語**: JavaScript / TypeScript
-- **AI**: OpenAI API
 
 ## 環境構築
 

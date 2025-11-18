@@ -1,6 +1,5 @@
 import { client } from "@/app/lib/microcms";
 import { notFound } from "next/navigation";
-import "highlight.js/styles/github-dark-dimmed.css";
 import PostBody from "./PostBody";
 
 export async function generateStaticParams() {

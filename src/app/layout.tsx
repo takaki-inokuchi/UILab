@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "UI Lab StudioはモダンなCSSの使用方法をまとめているブログ記事です",
   icons: {
     icon: "/siteimage.png", 
-    shortcut: "/siteimage-32x32.png",
+    shortcut: "/siteimage.png",
     apple: "/siteimage.png",
   },
 };
